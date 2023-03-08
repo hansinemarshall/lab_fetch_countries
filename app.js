@@ -17,17 +17,13 @@ const getCountryByName = (countryName) =>{
     .then(data => pop.append(data[0].population));
 }
 
-
-
 // getCountryByName("germany");
 
 const countriesNameList = document.querySelector("ul");
 
 const getAllCountries = () => {
     
-    // const n = data.length();
-    // const countriesList = new Array(n);
-    
+   
     fetch("https://restcountries.com/v3.1/all")
     .then(response => response.json())
     .then(data => {
